@@ -42,9 +42,9 @@ let App = ({ fetchWeather, ...props }) => {
         {/* <Row className="justify-content-md-center"> */}
         {/* <Col> */}
 
-        <Switch>
+        <Switch>     
           <Route exact path='/' render={() => <Redirect to={'/popular-movies'} />} />
-
+          <Route path='/movie_info' render={() => <Redirect to={'/popular-movies'} />} />
           <Route path='/movie-info/:movie_id?' render={withSuspense(MovieInfo)} />
           <Route path='/movie-releases/:movie_id?' render={withSuspense(MovieReleases)} />
           <Route path='/casts/:movie_id?' render={withSuspense(MovieCasts)} />
