@@ -45,21 +45,21 @@ let App = ({ fetchWeather, ...props }) => {
         <Switch>
           <Route exact path='/' render={() => <Redirect to={'/popular-movies'} />} />
 
-          <Route exact path='/movie-info/:movie_id?' render={withSuspense(MovieInfo)} />
-          <Route exact path='/movie-releases/:movie_id?' render={withSuspense(MovieReleases)} />
-          <Route exact path='/casts/:movie_id?' render={withSuspense(MovieCasts)} />
-          <Route exact path='/crew/:movie_id?' render={withSuspense(MovieCrew)} />
-          <Route exact path='/people-filmography/:people_id?' render={withSuspense(PeopleFilmography)} />
-          <Route exact path='/people-crew/:people_id?' render={withSuspense(PeopleCrew)} />
-          <Route exact path='/people/:people_id?' render={withSuspense(PeopleInfo)} />
-          <Route exact path='/search/:s_query=:s_query?' render={withSuspense(Search)} />
-          <Route exact path='/login' render={withSuspense(Login)} />
-          <Route exact path='/profile' render={withSuspense(Profile)} />
+          <Route path='/movie-info/:movie_id?' render={withSuspense(MovieInfo)} />
+          <Route path='/movie-releases/:movie_id?' render={withSuspense(MovieReleases)} />
+          <Route path='/casts/:movie_id?' render={withSuspense(MovieCasts)} />
+          <Route path='/crew/:movie_id?' render={withSuspense(MovieCrew)} />
+          <Route path='/people-filmography/:people_id?' render={withSuspense(PeopleFilmography)} />
+          <Route path='/people-crew/:people_id?' render={withSuspense(PeopleCrew)} />
+          <Route path='/people/:people_id?' render={withSuspense(PeopleInfo)} />
+          <Route path='/search/:s_query=:s_query?' render={withSuspense(Search)} />
+          <Route path='/login' render={withSuspense(Login)} />
+          <Route path='/profile' render={withSuspense(Profile)} />
 
-          <Route exact path='/popular-movies' render={() => <PopularMovies />} />
-          <Route exact path='/now-playing' render={withSuspense(NowPlaying)} />
-          <Route exact path='/upcoming' render={withSuspense(Upcoming)} />
-          <Route exact path='/person' render={withSuspense(Person)} />
+          <Route path='/popular-movies' render={() => <PopularMovies />} />
+          <Route path='/now-playing' render={withSuspense(NowPlaying)} />
+          <Route path='/upcoming' render={withSuspense(Upcoming)} />
+          <Route path='/person' render={withSuspense(Person)} />
           <Route path='*' render={() => <div>404 NOT FOUND</div>} />
         </Switch>
 
