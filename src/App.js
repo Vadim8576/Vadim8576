@@ -12,7 +12,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-//
+//////
 
 const Login = React.lazy(() => import('./components/login/LoginContainer'));
 const Profile = React.lazy(() => import('./components/profilePage/ProfilePageContainer'));
