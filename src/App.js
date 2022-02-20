@@ -60,7 +60,7 @@ let App = ({ fetchWeather, ...props }) => {
           <Route exact path='/now-playing' render={withSuspense(NowPlaying)} />
           <Route exact path='/upcoming' render={withSuspense(Upcoming)} />
           <Route exact path='/person' render={withSuspense(Person)} />
-
+          <Route path='*' render={() => <div>404 NOT FOUND</div>} />
         </Switch>
 
 
